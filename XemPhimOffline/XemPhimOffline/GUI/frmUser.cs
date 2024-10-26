@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using XemPhimOffline.Models;
+
+namespace XemPhimOffline.GUI
+{
+    public partial class frmUser : Form
+    {
+        public frmUser()
+        {
+            InitializeComponent();
+        }
+
+        private void btnPlaylist_Click(object sender, EventArgs e)
+        {
+             
+            Playlist playlist2 = new Playlist();
+         
+        }
+    }
+}

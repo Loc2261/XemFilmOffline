@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EA450B7-4501-465E-987B-A2ECB4AF9F00}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XemPhimOffline</RootNamespace>
+    <AssemblyName>XemPhimOffline</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ReaLTaiizor, Version=3.8.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ReaLTaiizor.3.8.0.7\lib\net481\ReaLTaiizor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm1Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frm1Main.Designer.cs">
+      <DependentUpon>frm1Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmCountry.Designer.cs">
+      <DependentUpon>frmCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDirector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDirector.Designer.cs">
+      <DependentUpon>frmDirector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLanguage.Designer.cs">
+      <DependentUpon>frmLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmRegister.Designer.cs">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\DaoDien.cs" />
+    <Compile Include="Models\DienVien.cs" />
+    <Compile Include="Models\GoiPhim.cs" />
+    <Compile Include="Models\NgonNgu.cs" />
+    <Compile Include="Models\Phim.cs" />
+    <Compile Include="Models\PhimDBContext.cs" />
+    <Compile Include="Models\Playlist.cs" />
+    <Compile Include="Models\QuocGia.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
+    <Compile Include="Models\TheLoai.cs" />
+    <Compile Include="Models\UserRating.cs" />
+    <Compile Include="Models\WatchHistory.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Subscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subscription.Designer.cs">
+      <DependentUpon>Subscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Review.Designer.cs">
+      <DependentUpon>Review.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frm1Main.resx">
+      <DependentUpon>frm1Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmCountry.resx">
+      <DependentUpon>frmCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDirector.resx">
+      <DependentUpon>frmDirector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLanguage.resx">
+      <DependentUpon>frmLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmRegister.resx">
+      <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subscription.resx">
+      <DependentUpon>Subscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Review.resx">
+      <DependentUpon>Review.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Actor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrator Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clapperboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Control Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Country.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diversity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hashtag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Language.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimize Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Movie Projector.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Not Showing Video Frames.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Popular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restore Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sorting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Squared Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Squared Menu_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Terms and Conditions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Keycap Number Sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Top Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Playlist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Documentary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Video.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="ReaLTaiizor">
+      <Version>3.8.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SqlClient">
+      <Version>4.8.6</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Test Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Padlock.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="AppResources\MovieBanners\Amelie_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\City of God_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Crouching Tiger, Hidden Dragon_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Forest Gump_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Inception_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Interstellar_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\La La Land_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Life Is Beautiful_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Oldboy_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Pans Labyrinth_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Parasite_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Pulp Fiction_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Spirited Away_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\The Dark Knight_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\The Godfather_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\The Grand Budapest Hotel_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\The Lion King_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\The Matrix_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\The Shawshank Redemption_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\MovieBanners\Whiplash_Banner.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Amelie %282001%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\City of God %282002%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Crouching Tiger, Hidden Dragon %282000%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Forrest Gump %281994%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Inception %282010%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Interstellar %282014%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\La La Land %282016%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Life is Beautiful %281998%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Oldboy %282003%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Pan%27s Labyrinth %282006%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Parasite %282019%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Pulp Fiction %281994%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Spirited Away %282001%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\The Dark Knight %282008%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\The Godfather %281972%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\The Grand Budapest Hotel %282014%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\The Lion King %281994%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\The Matrix %281999%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\The Shawshank Redemption %281994%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\Movies\Whiplash %282014%29_Trailer.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AppResources\ProfilePic\F0cCrOeX0AILIsy.jpg" />
+    <Content Include="AppResources\ProfilePic\F0gkGZYaYAAo9u-.jpg" />
+    <Content Include="AppResources\ProfilePic\F0xr8kGX0AYhJQj.jpg" />
+    <Content Include="AppResources\ProfilePic\F1DeVt0acAAsqU9 %281%29.jpg" />
+    <Content Include="AppResources\ProfilePic\F1oVyqGaIAEmgjc.jpg" />
+    <Content Include="AppResources\ProfilePic\F1YvasNakAEL6b8.jpg" />
+    <Content Include="AppResources\ProfilePic\F2k-Xz4a0AAkzHK.jpg" />
+    <Content Include="AppResources\ProfilePic\F2nBYb7bwAEDw84.jpg" />
+    <Content Include="AppResources\ProfilePic\F2rcJ5yagAAeVH5.jpg" />
+    <Content Include="AppResources\ProfilePic\F4YXRdmXwAAcXaU.jpg" />
+    <Content Include="AppResources\ProfilePic\F5bJYCvbIAAhsOZ %281%29.jpg" />
+    <Content Include="AppResources\ProfilePic\F5Let1CbUAArw5b.jpg" />
+    <Content Include="AppResources\ProfilePic\F6xZjXvbYAAlmw0 %281%29.jpg" />
+    <Content Include="AppResources\ProfilePic\F7BCRPdbAAAIzyg.jpg" />
+    <Content Include="AppResources\ProfilePic\F7l7qk8aEAAkvlz.jpg" />
+    <Content Include="AppResources\ProfilePic\F_i7cGzbMAECGLH.jpg" />
+    <Content Include="AppResources\ProfilePic\F_Uu5FOXMAArQY4.jpg" />
+    <Content Include="AppResources\ProfilePic\F_xS-o3bcAAWPaL.jpg" />
+    <Content Include="AppResources\ProfilePic\F_YI2uiawAAIDSG.jpg" />
+    <Content Include="AppResources\ProfilePic\F_yWTIOaAAAjk7K.jpg" />
+    <None Include="Resources\iconfilm11.PNG" />
+    <None Include="Resources\iconfilm1.PNG" />
+    <None Include="Resources\Leonardo_Phoenix_Create_a_modern_sleek_and_vibrant_Watch_Movie_1.jpg" />
+    <None Include="Resources\visa.png" />
+    <None Include="Resources\2.PNG" />
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\Membership Card.png" />
+    <None Include="Resources\Whiplash_Banner.jpg" />
+    <None Include="Resources\The Shawshank Redemption_Banner.jpg" />
+    <None Include="Resources\The Matrix_Banner.jpg" />
+    <None Include="Resources\The Lion King_Banner.jpg" />
+    <None Include="Resources\The Grand Budapest Hotel_Banner.jpg" />
+    <None Include="Resources\The Godfather_Banner.jpg" />
+    <None Include="Resources\Spirited Away_Banner.jpg" />
+    <None Include="Resources\Pulp Fiction_Banner.jpg" />
+    <None Include="Resources\Parasite_Banner1.jpg" />
+    <None Include="Resources\Pans Labyrinth_Banner1.jpg" />
+    <None Include="Resources\Oldboy_Banner1.jpg" />
+    <None Include="Resources\Life Is Beautiful_Banner1.jpg" />
+    <None Include="Resources\La La Land_Banner2.jpg" />
+    <None Include="Resources\Parasite_Banner.jpg" />
+    <None Include="Resources\Pans Labyrinth_Banner.jpg" />
+    <None Include="Resources\Oldboy_Banner.jpg" />
+    <None Include="Resources\Life Is Beautiful_Banner.jpg" />
+    <None Include="Resources\La La Land_Banner1.jpg" />
+    <None Include="Resources\Interstellar_Banner.jpg" />
+    <None Include="Resources\Inception_Banner1.jpg" />
+    <None Include="Resources\Forest Gump_Banner.jpg" />
+    <None Include="Resources\Crouching Tiger, Hidden Dragon_Banner.jpg" />
+    <None Include="Resources\City of God_Banner.jpg" />
+    <None Include="Resources\Amelie_Banner.jpg" />
+    <None Include="Resources\La La Land_Banner.jpg" />
+    <None Include="Resources\Inception_Banner.jpg" />
+    <None Include="Resources\The Dark Knight_Banner.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+</Project>
